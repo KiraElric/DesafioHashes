@@ -18,4 +18,12 @@ ventas.each_slice(3).with_index do |slice,index|
   quarters["Q#{index+1}"] = slice.inject(0){|sum, element| sum += element[1]}
 end
 
+
+#Tomo los valores solamente del hash y los separo con slice, 
+#luego los sumo y los guardo en un nuevo hash
+
+#ventas.values.each_slice(3).with_index do |slice,index|
+  #quarters["Q#{index+1}"] = slice.reduce(:+)
+#end
+
 print quarters
