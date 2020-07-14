@@ -1,12 +1,7 @@
 def filter(hash)
-  new_hash = {}
   condition = ARGV[0].to_i
-  hash.each do |k,v|
-    if v > condition
-      new_hash[k] = v
-    end
-  end
-  return new_hash.values
+  new_hash = hash.select{|k,v| v > condition}
+  return new_hash
 end
 
 ventas = {
